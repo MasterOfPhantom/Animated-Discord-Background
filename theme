@@ -1,0 +1,65 @@
+/* Add the animated background to the entire Discord window */
+:root {
+    --background-gradient-start: #6b00ff;
+    --background-gradient-end: #52d468;
+}
+
+/* Set the gradient background and animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(270deg, var(--background-gradient-start), var(--background-gradient-end));
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+/* Style adjustments for better readability on the light background */
+/* Customize the styles as needed */
+body {
+    color: #333; /* Text color */
+}
+
+/* Adjust the background of the chat area */
+.theme-dark .messages-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom scrollbar style */
+/* This example uses the SimpleBar library, but you can adjust it based on your preferences */
+.custom-scrollbar .simplebar-scrollbar::before {
+    background-color: rgba(107, 0, 255, 0.8);
+}
+
+/* Animation keyframes */
+@-webkit-keyframes AnimationName {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@-moz-keyframes AnimationName {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@-o-keyframes AnimationName {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes AnimationName {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
